@@ -103,11 +103,45 @@ var objB = _.pick(objA, ['prop1', 'prop2']); // Make new object with only those 
 
 
 
+// Hmm Yeah it's true, it seems most of this is supported by ES6 already.... Let's see if there are like 5 shortcuts that make it worth including, kind of like p5.
 
 
 
 
 
+// The other side: ES6:
+// https://www.sitepoint.com/lodash-features-replace-es6/
+
+_.head([1, 2, 3]);
+// 1
+_.tail([1, 2, 3]);
+// [2, 3]
+
+// becomes
+const [head, ...tail] = [1, 2, 3]; // Destructuring syntax
+
+// NOte that spread can also clone.
+
+
+// Spread can also allow for variable arguments to a function -- damn, doin triple duty!
+
+
+// Currying becomes easier with TYPE SIGNATURES.  --- But arrow functions also alleviate this??
+
+// Arrow functions also ameliorate PARTIAL FUNCTIONS
+
+//
+
+
+
+var object = { 'a': 1, 'b': '2', 'c': 3 };
+
+// return _.pick(object, ['a', 'c']);
+// { a: 1, c: 3 }
+
+// becomes
+
+const { a, c } = { a: 1, b: 2, c: 3 };
 
 
 
